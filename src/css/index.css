@@ -34,9 +34,21 @@ nav ul li:hover > ul {
     display: block;
 }
 
+#main-slider-section {
+    width: 100%;
+    overflow: hidden;
+}
+
 .main-slide {
     display: flex;
-    overflow: hidden;
+}
+
+.main_banner {
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    flex-shrink: 0;
+    height: 500px;
 }
 
 .main_banner h2 {
@@ -58,12 +70,6 @@ nav ul li:hover > ul {
     padding: 10px;
 }
 
-.main_banner img {
-    width: 100%;
-    display: block;
-    position: relative;
-}
-
 .main-btn {
     border: 1px solid #A9A8A8;
     background-color: #A9A8A8;
@@ -82,6 +88,7 @@ nav ul li:hover > ul {
 
 #brand {
     display: flex;
+    margin-bottom: 110px;
 }
 
 .brand-content {
@@ -125,4 +132,42 @@ nav ul li:hover > ul {
     right: 450px;
 }
 
+#menu-story h3 {
+    text-align: center;
+    margin-bottom: 110px;
+    color: #302323;
+    font-weight: bold;
+}
 
+#menu-story > ul {
+    display: flex;
+    font-size: 30px;
+    font-weight: bold;
+    color: #302323;
+    margin-left: 39%;
+}
+
+#menu-story > ul > li {
+    margin-bottom: 110px;
+}
+
+#menu-story > ul > li:first-of-type {
+    border: 2px solid black;
+    border-top: none;
+    border-bottom: none;
+    border-left: none;
+    padding-right: 72px;
+}
+
+#menu-story > ul > li:last-of-type {
+    padding-left: 72px;
+}
+
+#menu-story ul {
+    display: flex;
+}
+
+#menu-story .tap-menu-container img {
+    width: 355px;
+    height: 322px;
+}

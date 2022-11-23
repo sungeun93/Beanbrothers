@@ -3,6 +3,11 @@ header {
     justify-content: space-between;
     align-items: center;
     background-color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    box-shadow: 3px 3px 10px grey;
 }
 
 h1 a {
@@ -28,6 +33,9 @@ nav ul {
 nav ul li ul {
     display: none;
     position: absolute;
+    width: 100%;
+    background-color: white;
+    z-index: 999;
 }
 
 nav ul li:hover > ul {
@@ -37,6 +45,8 @@ nav ul li:hover > ul {
 #main-slider-section {
     width: 100%;
     overflow: hidden;
+    position: relative;
+    margin-bottom: 200px;
 }
 
 .main-slide {
@@ -48,26 +58,32 @@ nav ul li:hover > ul {
     background-position: center;
     width: 100vw;
     flex-shrink: 0;
-    height: 500px;
+    height: 920px;
+}
+
+.main_banner .text-container {
+    margin-left: 15%;
+    margin-top: 18%;
 }
 
 .main_banner h2 {
     font-size: 60px;
     font-weight: bold;
     color: #302323;
+    margin-bottom: 50px;
 }
 
 .main_banner p {
     font-size: 24px;
     color: #4E3232;
+    margin-bottom: 34px;
 }
 
 .main_banner span {
     border: 1px solid #302323;
     border-radius: 2px;
-    box-sizing: border-box;
     font-size: 18px;
-    padding: 10px;
+    padding: 10px 50px;
 }
 
 .main-btn {
@@ -79,11 +95,21 @@ nav ul li:hover > ul {
     font-size: 18px;
     text-align: center;
     line-height: 50px;
+    position: absolute;
+    bottom: 10px;
+    left: 850px;
 }
-
 
 .xi-long-arrow-left , .xi-long-arrow-right {
     font-weight: bold;
+}
+
+.xi-long-arrow-left {
+    padding-right: 25px;
+}
+
+.xi-long-arrow-right {
+    padding-left: 25px;
 }
 
 #brand {
@@ -108,7 +134,7 @@ nav ul li:hover > ul {
     position: absolute;
     top: 380px;
     right: 200px;
-    vertical-align: middle;
+    text-align: center;
 }
 
 #brand h3 {
@@ -123,9 +149,8 @@ nav ul li:hover > ul {
 
 #brand .unit-button {
     color: #FCF8F8;
-    border: 1px solid #FCF8F8;
-    border-left: none;
-    border-right: none;
+    border-top: 1px solid #FCF8F8;
+    border-bottom: 1px solid #FCF8F8;
     padding: 10px;
     position: absolute;
     top: 570px;
@@ -145,10 +170,12 @@ nav ul li:hover > ul {
     font-weight: bold;
     color: #302323;
     margin-left: 39%;
+    cursor: pointer;
 }
 
 #menu-story > ul > li {
     margin-bottom: 110px;
+    gap: 30px;
 }
 
 #menu-story > ul > li:first-of-type {
@@ -167,7 +194,56 @@ nav ul li:hover > ul {
     display: flex;
 }
 
+#menu-story .tap-menu-container {
+    overflow: hidden;
+}
+
 #menu-story .tap-menu-container img {
+    display: inline-block;
     width: 355px;
     height: 322px;
+    margin-left: 200px;
+    margin-bottom: -30px;
 }
+
+#menu-story .tap-menu-container P {
+    text-align: center;
+    align-items: center;
+    transform: translate(18%);
+    font-size: 20px;
+}
+
+#menu-story .slider-scroll {
+    border: 5px solid #D9D9D9;
+    border-radius: 36px;
+    background-color: #D9D9D9;
+    width: 1200px;
+}
+
+#menu-story a > span {
+    border: 1px solid #1B1212;
+    border-radius: 30px;
+    color: #1B1212;
+    padding: 10px 40px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#service h3 {
+    margin-top: 190px;
+    background-position: center;
+    background-size: cover;
+    width: 100vw;
+    height: 839px;
+    color: #F4F4F4;
+    font-weight: bold;
+}
+
+#service p {
+    color: #F4F4F4;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+

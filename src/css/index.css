@@ -1,6 +1,3 @@
-/* 헤더 메뉴 전체 내려오기
-   menu-story 슬라이더*/
-
 header {
     display: flex;
     justify-content: space-between;
@@ -268,6 +265,7 @@ nav ul li:hover > ul {
     width: 100vw;
     height: 839px;
     display: flex;
+    margin-bottom: 270px;
 }
 
 .service-container::before {
@@ -287,6 +285,10 @@ nav ul li:hover > ul {
     margin-top: 15%;
 }
 
+#service .box-contain {
+    width: calc(40% - 1rem);
+}
+
 #service input {
     width: 270px;
     height: 35px;
@@ -295,23 +297,95 @@ nav ul li:hover > ul {
     padding: 10px 10px;
 }
 
-#service input:nth-child(4) {
-    width: 550px;
-    height: 320px;
-}
-
 #service input:nth-child(5) {
     width: 167px;
     height: 60px;
     font-size: 30px;
 }
 
-#beanstagram h3 {
-    color: #302323;
-    text-align: center;    
+#service textarea {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 10px;
+
 }
 
-#store h3 {
+#beanstagram h3 {
     color: #302323;
-    text-align: center;
+    text-align: center;  
+    font-weight: bold;
+    margin-bottom: 75px;
+}
+
+#beanstagram .rotation ul {
+    display: flex;
+}
+
+#beanstagram .rotation li {
+    width: 370px;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    margin-right: 50px;
+    overflow: hidden;
+    margin-bottom: 270px;
+}
+
+#store .store-container {
+    display: flex;
+}
+
+#store .store-text {
+    margin-left: 25%;
+    margin-right: 10%;
+}
+
+#store .store-container h3 {
+    color: #302323;
+    font-weight: bold;
+}
+
+#store .store-container p {
+    margin-top: 80px;
+    margin-bottom: 80px;
+    font-size: 20px;
+}
+
+#store .store-container img {
+    width: 390px;
+    height: 390px;
+    border-radius: 100%;
+}
+
+#store .store-img {
+    margin-bottom: 300px;
+}
+
+#store a {
+    border: 1px solid #1B1212;
+    border-radius: 30px;
+    color: #1B1212;
+    padding: 10px 40px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+footer {
+    background-color: #1C1C1C;
+    color: white;
+    width: 100%;
+    height: 204px;
+    font-size: 15px;
+}
+
+.foot-container {
+    padding: 70px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.foot-container .sns-link a {
+    text-align: right;
+    color: white;
+    padding-right: 20px;
 }

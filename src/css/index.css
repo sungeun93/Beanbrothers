@@ -241,6 +241,24 @@ nav ul li:hover > ul {
     font-weight: bold;
 }
 
+#service {
+    position: relative;
+    background-position-x: center;
+    padding: 114px 32px;
+    margin-top: 200px;
+}
+
+#service::before{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: '';
+    background-color: black;
+    opacity: 0.5;
+}
+
 #service h3 {
     color: #F4F4F4;
     font-weight: bold;
@@ -262,31 +280,23 @@ nav ul li:hover > ul {
     position: relative;
     background-position: center;
     background-size: cover;
-    width: 100vw;
-    height: 839px;
+    max-width: 1200px;
     display: flex;
-    margin-bottom: 270px;
-}
-
-.service-container::before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    content: '';
-    background-color: black;
-    opacity: 0.5;
+    margin:0 auto;
+    justify-content: center;
 }
 
 #service .text-contain, .box-contain {
     position: relative;
-    margin-left: 15%;
-    margin-top: 15%;
+}
+
+#service .text-contain {
+    margin-right: 24px;
+    flex-basis: 50%;
 }
 
 #service .box-contain {
-    width: calc(40% - 1rem);
+    flex-basis: 50%;
 }
 
 #service input {
@@ -294,31 +304,45 @@ nav ul li:hover > ul {
     height: 35px;
     font-size: 20px;
     font-weight: bold;
-    padding: 10px 10px;
+    padding: 5px 5px;
+    background-color: rgba(255,255,255,0.7);
+    border-style: solid;
+    margin: 8px 0;
 }
 
-#service input:nth-child(5) {
-    width: 167px;
-    height: 60px;
-    font-size: 30px;
+#service input:nth-child(2) {
+    margin-left: 17px;
 }
 
 #service textarea {
     font-size: 20px;
     font-weight: bold;
-    padding: 10px 10px;
+    padding: 5px 5px;
+    margin-top: 10px;
+    box-sizing: border-box;
+    background-color: rgba(255,255,255,0.7);
 
+}
+
+#service input[type="submit"] {
+    width: 150px;
+    height: 50px;
+    font-size: 30px;
+    display: block;
+    margin-left: auto;
+    background-color: rgba(255,255,255,0.7);
 }
 
 #beanstagram h3 {
     color: #302323;
     text-align: center;  
     font-weight: bold;
-    margin-bottom: 75px;
+    margin: 90px 0;
 }
 
 #beanstagram .rotation ul {
     display: flex;
+    overflow: hidden;
 }
 
 #beanstagram .rotation li {
@@ -327,8 +351,8 @@ nav ul li:hover > ul {
     background-size: cover;
     background-position: center;
     margin-right: 50px;
-    overflow: hidden;
     margin-bottom: 270px;
+    flex-shrink: 0;
 }
 
 #store .store-container {
@@ -336,7 +360,7 @@ nav ul li:hover > ul {
 }
 
 #store .store-text {
-    margin-left: 25%;
+    margin-left: 28%;
     margin-right: 10%;
 }
 

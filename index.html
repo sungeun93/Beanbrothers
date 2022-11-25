@@ -206,8 +206,8 @@
             </div>
         </section>
         
-        <section id="service">
-            <div class="service-container" style="background-image: url(/image/img_1.jpg);">
+        <section id="service" style="background-image: url(/image/img_1.jpg);">
+            <div class="service-container">
                 <div class="text-contain">
                     <h3>커피 전문가들이 전하는 </br> 다양한 서비스</h3>
                     <p>
@@ -225,8 +225,10 @@
                 <div class="box-contain">
                     <form>
                         <input type="text" name="name" placeholder="이름">
-                        <input type="text" name="tel" placeholder="연락처">
-                        <input type="text" name="e-mail" placeholder="e-mail">
+                        <div>
+                            <input type="text" name="tel" placeholder="연락처">
+                            <input type="text" name="e-mail" placeholder="e-mail">
+                        </div>
                         <textarea name="content" placeholder="자세한 문의 내용을 입력해주세요" cols="55" rows="10"></textarea>
                         <input type="submit" value="SEND">
                     </form>

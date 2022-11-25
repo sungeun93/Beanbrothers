@@ -13,11 +13,11 @@ header {
 
 h1 a {
     display: block;
-    margin: 32px 0 32px 32px; 
+    margin: 32px; 
 }
 
 h1 a img {
-    width: 80%;
+    width: 65%;
 }
 
 nav {
@@ -63,6 +63,7 @@ nav ul li:hover > ul {
     width: 100vw;
     flex-shrink: 0;
     height: 920px;
+    cursor: pointer;
 }
 
 .main_banner .text-container {
@@ -101,7 +102,8 @@ nav ul li:hover > ul {
     line-height: 50px;
     position: absolute;
     bottom: 10px;
-    left: 850px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .xi-long-arrow-left , .xi-long-arrow-right {
@@ -172,6 +174,10 @@ nav ul li:hover > ul {
     position: relative;
 }
 
+#menu-story {
+    margin-bottom: 160px;
+}
+
 #menu-story h3 {
     text-align: center;
     margin-bottom: 110px;
@@ -204,10 +210,11 @@ nav ul li:hover > ul {
 
 #menu-story ul {
     display: flex;
+    overflow: hidden;
 }
 
 #menu-story .tap-menu-container {
-    overflow: hidden;
+    position: relative;
 }
 
 #menu-story .tap-menu-container img {
@@ -225,11 +232,35 @@ nav ul li:hover > ul {
     font-size: 20px;
 }
 
+#menu-story .tap-menu-container_02 {
+    display: none;
+}
+
+#menu-story .menu-slider {
+    display: flex;
+    margin: 50px 0 0 190px;
+    align-items: center;
+}
+
 #menu-story .slider-scroll {
-    border: 5px solid #D9D9D9;
     border-radius: 36px;
     background-color: #D9D9D9;
-    width: 1200px;
+    width: 1350px;
+    height: 10px;
+}
+
+#menu-story .scroll {
+    border-radius: 30px;
+    color: #242424;
+    background-color: #242424;
+    display: block;
+    width: 200px;
+    height: 100%;
+}
+
+#menu-story .more {
+    text-align: center;
+    margin-top: 80px;
 }
 
 #menu-story a > span {
@@ -245,7 +276,6 @@ nav ul li:hover > ul {
     position: relative;
     background-position-x: center;
     padding: 114px 32px;
-    margin-top: 200px;
 }
 
 #service::before{
@@ -263,7 +293,6 @@ nav ul li:hover > ul {
     color: #F4F4F4;
     font-weight: bold;
     margin-bottom: 60px;
-
 }
 
 #service p {
@@ -333,11 +362,18 @@ nav ul li:hover > ul {
     background-color: rgba(255,255,255,0.7);
 }
 
+#beanstagram .xi-instagram {
+    display: block;
+}
+
 #beanstagram h3 {
     color: #302323;
     text-align: center;  
     font-weight: bold;
     margin: 90px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #beanstagram .rotation ul {

@@ -110,15 +110,15 @@ nav ul li:hover > ul {
     transform: translateX(-50%);
 }
 
-.xi-long-arrow-left , .xi-long-arrow-right {
+.xi-arrow-left , .xi-arrow-right {
     font-weight: bold;
 }
 
-.xi-long-arrow-left {
+.xi-arrow-left {
     padding-right: 25px;
 }
 
-.xi-long-arrow-right {
+.xi-arrow-right {
     padding-left: 25px;
 }
 
@@ -246,6 +246,14 @@ nav ul li:hover > ul {
     align-items: center;
 }
 
+.xi-long-arrow-left {
+    padding-right: 15px;
+}
+
+.xi-long-arrow-right {
+    padding-left: 15px;
+}
+
 #menu-story .slider-scroll {
     border-radius: 36px;
     background-color: #D9D9D9;
@@ -309,7 +317,7 @@ nav ul li:hover > ul {
     margin-bottom: 24px;
 }
 
-#servie .service-container {
+#service .service-container {
     position: relative;
     background-position: center;
     background-size: cover;
@@ -461,12 +469,18 @@ footer {
     }
 
     header nav {
-        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
     }
 
     .xi-bars {
         display: block;
-        flex-direction: column;
     }
 
     #main-slider-section .main_banner {
@@ -493,15 +507,15 @@ footer {
         line-height: 30px;
     }
 
-    .xi-long-arrow-left , .xi-long-arrow-right {
+    .xi-arrow-left, .xi-arrow-right {
         font-size: 12px;
     }
 
-    .xi-long-arrow-left {
+    .xi-arrow-left {
         padding-right: 15px;
     }
 
-    .xi-long-arrow-right {
+    .xi-arrow-right {
         padding-left: 15px;
     }
 
@@ -521,7 +535,7 @@ footer {
 
     #menu-story .tap-menu-container img {
         width: 304px;
-        height: 240;
+        height: 304px;
         margin-left: 85px;
     }
 
@@ -533,8 +547,12 @@ footer {
         margin: 45px 90px 0 125px;
     }
 
-    #menu-story .xi-long-arrow-left, .xi-long-arrow-right {
+    #menu-story .menu-slider > .xi-long-arrow-left, .xi-long-arrow-right {
         display: none;
+    }
+
+    #service .service-container {
+        flex-direction: column;
     }
 
     #service h3 {
@@ -555,7 +573,7 @@ footer {
 
     #beanstagram .rotation li {
         width: 178px;
-        height: 228px;
+        height: 308px;
     }
 
     #store .store-container {
@@ -576,6 +594,201 @@ footer {
         margin-top: 110px;
     }
 }
+
 @media screen and (max-width:375px) {
+    header {
+        height: 90px;
+    }
     
+    h1 a img {
+        width: 50%;
+    }
+
+    #main-slider-section {
+        margin-bottom: 80px;
+    }
+    
+    #main-slider-section h2 {
+        font-size: 25px;
+    }
+    
+    #main-slider-section p {
+        font-size: 14px;
+    }
+    
+    #main-slider-section .main_banner span {
+        font-size: 10px;
+        padding: 5px 5px;
+    }
+    
+    .main_banner {
+        height: 340px;
+    }
+
+    .main-btn {
+        display: none;
+    }
+
+    #brand {
+        margin-bottom: 80px;
+    }
+
+    #brand .brand-content {
+        width: 375px;
+        height: 500px;
+    }
+
+    #brand h3 {
+        font-size: 25px;
+    }
+
+    #brand p {
+        font-size: 12px;
+    }
+
+    #brand a {
+        font-size: 8px;
+    }
+
+    #menu-story h3 {
+        font-size: 25px;
+        margin-bottom: 60px;
+    }
+
+    #menu-story > ul {
+        font-size: 18px;
+        margin-left: 15%;
+    }
+    
+    #menu-story > ul > li {
+        margin-bottom: 60px;
+    }
+
+    #menu-story > ul > li:first-of-type {
+        border-right: 2px solid black;
+        padding-right: 40px;
+    }
+
+    #menu-story > ul > li:last-of-type {
+        padding-left: 40px;
+    }
+
+    #menu-story .tap-menu-container img {
+        width: 190px;
+        height: 190px;
+    }
+
+    #menu-story .tap-menu-container p {
+        font-size: 14px;
+        transform: translate(16%);
+        padding-top: 15px;
+    }
+
+    #menu-story .menu-slider {
+        display: none;
+    }
+
+    #menu-story .more {
+        margin-left: -5%;
+        margin-top: 60px;
+    }
+
+    #menu-story a > span {
+        font-size: 15px;
+        padding: 5px 20px;
+    }
+
+    #service {
+        width: max-content;
+        height: 830px;
+    }
+
+    #service h3 {
+        font-size: 25px;
+    }    
+
+    #service p {
+        font-size: 18px;
+    }
+
+    #service .box-contain {
+        width: 100%;
+    }
+
+    #service input {
+        width: 297px;
+        font-size: 18px;
+    }
+
+    #service .box-contain-flex {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #service input:nth-child(2) {
+        margin-left: 0;
+    }
+
+    #service textarea {
+        width: 310px;
+        font-size: 18px;
+    }
+
+    #service input[type="submit"] {
+        width: 98px;
+        height: 40px;
+        font-size: 25px;
+        margin-right: 22px;
+    }
+
+    #beanstagram h3 {
+        font-size: 25px;
+    }
+
+    #beanstagram .rotation li {
+        width: 160px;
+        height: 190px;
+    }
+
+    #store .store-container h3 {
+        font-size: 25px;
+    }
+
+    #store .store-container p {
+        font-size: 18px;
+        margin: 45px 0;
+    }
+
+    #store .store-text {
+        text-align: center;
+        margin-left: 10%;
+    }
+
+    #store .store-img {
+        margin-bottom: 100px;
+    }
+
+    #store .store-container img {
+        width: 250px;
+        height: 250px;
+        margin-left: 17%;
+        margin-top: 90px;
+    }
+
+    #store .store-text a {
+        font-size: 15px;
+        padding: 5px 20px;
+    }
+
+    footer {
+        height: 280px;
+    }
+
+    .foot-container {
+        flex-direction: column;
+    }
+
+    .foot-container .sns-link {
+        padding-top: 30px;
+    }
 }

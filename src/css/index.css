@@ -48,6 +48,13 @@ nav ul li:hover > ul {
 
 .xi-bars {
     display: none;
+    position: absolute;
+    right: 15px;
+    font-size: 24px;
+}
+
+.hambeger-menu {
+    display: none;
 }
 
 #main-slider-section {
@@ -469,18 +476,32 @@ footer {
     }
 
     header nav {
+        display: none;
         flex-direction: column;
-        align-items: flex-start;
     }
 
     header nav ul {
         flex-direction: column;
         align-items: center;
-        width: 100%;
+    }
+
+    .xi-market {
+        position: absolute;
+        right: 55px;
     }
 
     .xi-bars {
         display: block;
+    }
+
+    .hambeger-menu {
+        display: block;
+    }
+    
+    .hambeger-menu ul li:hover {
+        display: block;
+        width: 100%;
+        background-color: white;
     }
 
     #main-slider-section .main_banner {

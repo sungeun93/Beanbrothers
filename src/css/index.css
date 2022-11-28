@@ -34,7 +34,6 @@ nav ul {
 nav ul li ul {
     display: none;
     position: absolute;
-    width: 100%;
     background-color: white;
     z-index: 999;
 }
@@ -119,6 +118,7 @@ nav ul li:hover > ul {
 
 .xi-arrow-left , .xi-arrow-right {
     font-weight: bold;
+    cursor: pointer;
 }
 
 .xi-arrow-left {
@@ -255,10 +255,12 @@ nav ul li:hover > ul {
 
 .xi-long-arrow-left {
     padding-right: 15px;
+    cursor: pointer;
 }
 
 .xi-long-arrow-right {
     padding-left: 15px;
+    cursor: pointer;
 }
 
 #menu-story .slider-scroll {

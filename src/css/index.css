@@ -92,9 +92,26 @@ nav {
     height: 920px;
 }
 
+.main_banner .link-container {
+    width: 100%;
+    height: 100%;
+}
+
+.link {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
 .main_banner .text-container {
-    margin-left: 15%;
-    margin-top: 15%;
+    padding-left: 15%;
+    padding-top: 15%;
+}
+
+.main_banner .text-contain a {
+    display: block;
+    padding-left: 15%;
+    padding-top: 15%;
 }
 
 .main_banner h2 {
@@ -110,7 +127,7 @@ nav {
     margin-bottom: 34px;
 }
 
-.main_banner a {
+.main_banner span {
     display: inline-block;
     border: 1px solid #302323;
     border-radius: 2px;
@@ -745,4 +762,13 @@ footer {
     .foot-container .sns-link {
         padding-top: 30px;
     }
+}
+
+
+/* slide 전체 링크 css */
+.main_banner .a-block {
+    display: block;
+    border: none;
+    width: 100%;
+    height: 100%;
 }

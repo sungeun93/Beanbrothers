@@ -162,6 +162,8 @@ nav {
     align-items: center;
     flex-direction: column;
     justify-content: center;
+    padding: 0 16px;
+    box-sizing: border-box;
 }    
 
 .brand-content::before {
@@ -361,31 +363,33 @@ nav {
 
 #service .box-contain {
     flex-basis: 50%;
+    box-sizing: border-box;
 }
 
 #service input {
     width: 270px;
-    height: 35px;
+    height: 50px;
     font-size: 20px;
     font-weight: bold;
     padding: 5px 5px;
     background-color: rgba(255,255,255,0.7);
     border-style: solid;
     margin: 8px 0;
+    box-sizing: border-box;
 }
 
-#service input:nth-child(2) {
-    margin-right: 7px;
+#service .box-contain-flex {
+    display: flex;
+    justify-content: space-between;
 }
 
 #service textarea {
     font-size: 20px;
     font-weight: bold;
-    padding: 5px 5px;
+    padding: 5px;
     margin-top: 10px;
     box-sizing: border-box;
     background-color: rgba(255,255,255,0.7);
-
 }
 
 #service input[type="submit"] {
@@ -428,12 +432,12 @@ nav {
 
 #store .store-container {
     display: flex;
+    margin: 0 auto;
+    text-align: center;
+    justify-content: center;
+    gap: 150px;
 }
 
-#store .store-text {
-    margin-left: 28%;
-    margin-right: 10%;
-}
 
 #store .store-container h3 {
     color: #302323;
@@ -538,7 +542,7 @@ footer {
     }
 
     #main-slider-section .main_banner a {
-        padding: 5px 15px;
+        padding: 15px 15px;
     }
 
     #main-slider-section .main-btn {
@@ -548,11 +552,13 @@ footer {
     }
 
     .xi-arrow-left {
-        padding-right: 15px;
+        padding-right: 10px;
+        font-size: 16px;
     }
 
     .xi-arrow-right {
-        padding-left: 15px;
+        padding-left: 10px;
+        font-size: 16px;
     }
 
     #brand {
@@ -565,41 +571,33 @@ footer {
         height: 834px;
     }
 
+    #menu-story .tap-menu-container {
+    }
+
     #menu-story .tap-menu-container img {
-        width: 304px;
-        height: 304px;
+        width: 300px;
+        height: 300px;
     }
 
     #menu-story .tap-menu-container_01 {
-        gap: 20px;
+        gap: unset;
     }
 
     #menu-story .tap-menu-container_02 {
-        gap: 20px;
+        gap: unset;
     }
 
     #menu-story .menu-slider {
         margin-left: 0;
     }
 
-    #service .service-container {
-        flex-direction: column;
-    }
-
-    #service h3 {
-        margin-top: 0;
-    }
-
     #service p {
         margin-bottom: 70px;
     }
 
-    #service input {
-        width: 360px;
-    }
-
-    #service textarea {
-        width: 770px;
+    #service input[type="submit"] {
+        display: block;
+        margin-left: auto;
     }
 
     #beanstagram .rotation li {
@@ -612,27 +610,18 @@ footer {
         flex-direction: column;
     }
 
-    #store .store-text {
-        text-align: center;
-        margin:0 auto;
-    }
-
     #store .store-text br {
         display: none;
     }
 
     #store .store-img {
-        margin-left: 30%;
-        margin-top: 110px;
+        margin-top: 30px;
         margin-bottom: 200px;
     }
 }
 
 @media screen and (max-width:600px) {
-    header {
-        height: 90px;
-    }
-    
+
     h1 a img {
         width: 50%;
     }
@@ -641,25 +630,12 @@ footer {
         margin-bottom: 80px;
     }
     
-    #main-slider-section h2 {
-        font-size: 25px;
-    }
-    
-    #main-slider-section p {
-        font-size: 14px;
-    }
-    
-    #main-slider-section .main_banner span {
-        font-size: 10px;
-    }
-    
     .main_banner {
         height: 340px;
     }
 
     #main-slider-section .main_banner a {
-        font-size: 12px;
-        padding: 5px 5px;
+        padding: 10px 10px;
     }
 
     .main-btn {
@@ -671,29 +647,12 @@ footer {
     }
 
     #brand .brand-content {
-        width: 375px;
-        height: 500px;
-    }
-
-    #brand h3 {
-        font-size: 25px;
-    }
-
-    #brand p {
-        font-size: 12px;
-    }
-
-    #brand a {
-        font-size: 8px;
+        width: 100%;
+        height: 800px;
     }
 
     #menu-story h3 {
-        font-size: 25px;
         margin-bottom: 60px;
-    }
-
-    #menu-story > ul {
-        font-size: 18px;
     }
     
     #menu-story > ul > li {
@@ -709,13 +668,13 @@ footer {
         padding: 0 20px;
     }
 
-    #menu-story .tap-menu-container img {
-        width: 190px;
-        height: 190px;
+    #menu-story .tap-menu-container p {
+        font-size: 16px;
     }
 
-    #menu-story .tap-menu-container p {
-        font-size: 14px;
+    #menu-story .tap-menu-container img {
+        width: 200px;
+        height: 200px;
     }
 
     #menu-story .menu-slider {
@@ -726,34 +685,25 @@ footer {
         margin-top: 60px;
     }
 
-    #menu-story a > span {
-        font-size: 15px;
-        padding: 5px 20px;
-    }
-
     .xi-long-arrow-left, .xi-long-arrow-right {
         display: none;
     }
 
     #service {
-        width: max-content;
-        height: 830px;
-    }
-
-    #service h3 {
-        font-size: 25px;
-    }    
-
-    #service p {
-        font-size: 18px;
-    }
-
-    #service .box-contain {
         width: 100%;
     }
 
+    #service .service-container {
+        flex-direction: column;
+    }
+
+    #service .box-contain {
+        width: 90%;
+    }
+
     #service input {
-        width: 297px;
+        width: 100%;
+        height: 50px;
         font-size: 18px;
     }
 
@@ -762,12 +712,8 @@ footer {
         flex-direction: column;
     }
 
-    #service input:nth-child(2) {
-        margin-left: 0;
-    }
-
     #service textarea {
-        width: 310px;
+        width: 100%;
         font-size: 18px;
     }
 
@@ -775,45 +721,24 @@ footer {
         width: 98px;
         height: 40px;
         font-size: 25px;
-        margin-right: 22px;
-    }
-
-    #beanstagram h3 {
-        font-size: 25px;
     }
 
     #beanstagram .rotation li {
-        width: 160px;
-        height: 190px;
-    }
-
-    #store .store-container h3 {
-        font-size: 25px;
-    }
-
-    #store .store-container p {
-        font-size: 18px;
-        margin: 45px 0;
-    }
-
-    #store .store-text {
-        text-align: center;
-        margin-left: 10%;
+        width: 170px;
+        height: 200px;
     }
 
     #store .store-img {
         margin-bottom: 100px;
-        margin-left: 17%;
     }
 
     #store .store-container img {
-        width: 250px;
-        height: 250px;
+        width: 350px;
+        height: 350px;
     }
 
     #store .store-text a {
-        font-size: 15px;
-        padding: 5px 20px;
+        padding: 10px 40px;
     }
 
     footer {

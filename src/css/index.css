@@ -254,6 +254,8 @@ nav {
 
 #menu-story .tap-menu-container {
     position: relative;
+    width: 80%;
+    margin: 0 auto;
 }
 
 #menu-story ul {
@@ -262,6 +264,12 @@ nav {
     justify-content: center;
 }
 
+#menu-story .tap-menu-container ul {
+    justify-content: unset;
+    overflow: hidden;
+}
+
+
 #menu-story .tap-menu-container img {
     display: inline-block;
     width: 355px;
@@ -269,6 +277,7 @@ nav {
 }
 
 #menu-story .tap-menu-container_01 {
+    width: 100%;
     gap: 150px;
 }
 
@@ -329,7 +338,7 @@ nav {
 #service {
     position: relative;
     background-position-x: center;
-    padding: 114px 32px;
+    /*padding: 114px 32px;*/
 }
 
 #service::before{
@@ -365,26 +374,25 @@ nav {
     background-size: cover;
     max-width: 1200px;
     display: flex;
+    flex-wrap: wrap;
     margin:0 auto;
     justify-content: center;
+    padding: 10% 5%;
 }
 
 #service .text-contain, .box-contain {
     position: relative;
 }
 
-#service .text-contain {
-    margin-right: 24px;
-    flex-basis: 50%;
-}
-
 #service .box-contain {
-    flex-basis: 50%;
     box-sizing: border-box;
+    width: 100%;
+    min-width: 300px;
+    max-width: 580px;
 }
 
 #service input {
-    width: 270px;
+    width: 48%;
     height: 50px;
     font-size: 20px;
     font-weight: bold;
@@ -505,8 +513,27 @@ footer {
     color: #ffff;
     margin-right: 20px;
 }
+.text-contain {
+    min-width: 300px;
+    max-width: 580px;
+    width: 100%;
+}
 
-@media screen and (max-width:1200px) {
+form {
+    min-width: 300px;
+    max-width: 580px;
+    width: 100%;
+}
+
+textarea {
+    min-width: 300px;
+    max-width: 580px;
+    width: 100%;
+    resize: none;
+}
+
+/* tablet */
+@media screen and (max-width:1240px) {
     html, body {
         width: 100%;
         overflow-x: hidden;
@@ -639,7 +666,8 @@ footer {
     }
 }
 
-@media screen and (max-width:600px) {
+/* mobile */
+@media screen and (max-width:767spx) {
 
     h1 a img {
         width: 50%;

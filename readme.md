@@ -1,3 +1,11 @@
-# branch change -> git checkout 'branch name'
+# branch 관리
 
-# branch pull -> git pull
+# ==========================================
+
+# branch 생성 - > git branch '이름'
+
+# branch 변경 -> git checkout 'branch name'
+
+# ==========================================
+
+#

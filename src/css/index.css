@@ -103,13 +103,7 @@ nav {
     height: 100%;
 }
 
-.main_banner .text-container {
-    padding-left: 15%;
-    padding-top: 15%;
-}
-
-.main_banner .text-contain a {
-    display: block;
+#main_banner .text-container {
     padding-left: 15%;
     padding-top: 15%;
 }
@@ -252,12 +246,6 @@ nav {
     padding: 0 72px;
 }
 
-#menu-story .tap-menu-container {
-    position: relative;
-    width: 80%;
-    margin: 0 auto;
-}
-
 #menu-story ul {
     display: flex;
     overflow: hidden;
@@ -268,7 +256,6 @@ nav {
     justify-content: unset;
     overflow: hidden;
 }
-
 
 #menu-story .tap-menu-container img {
     display: inline-block;
@@ -287,6 +274,7 @@ nav {
 }
 
 #menu-story .tap-menu-container_02 {
+    width: 100%;
     display: none;
     gap: 150px;
 }
@@ -338,7 +326,6 @@ nav {
 #service {
     position: relative;
     background-position-x: center;
-    /*padding: 114px 32px;*/
 }
 
 #service::before{
@@ -415,6 +402,11 @@ nav {
     margin-top: 10px;
     box-sizing: border-box;
     background-color: rgba(255,255,255,0.7);
+    min-width: 300px;
+    max-width: 580px;
+    width: 100%;
+    resize: none;
+
 }
 
 #service input[type="submit"] {
@@ -519,20 +511,6 @@ footer {
     width: 100%;
 }
 
-form {
-    min-width: 300px;
-    max-width: 580px;
-    width: 100%;
-}
-
-textarea {
-    min-width: 300px;
-    max-width: 580px;
-    width: 100%;
-    resize: none;
-}
-
-/* tablet */
 @media screen and (max-width:1240px) {
     html, body {
         width: 100%;
@@ -664,139 +642,4 @@ textarea {
         margin-top: 30px;
         margin-bottom: 200px;
     }
-}
-
-/* mobile */
-@media screen and (max-width:767spx) {
-
-    h1 a img {
-        width: 50%;
-    }
-
-    #main-slider-section {
-        margin-bottom: 80px;
-    }
-    
-    .main_banner {
-        height: 340px;
-    }
-
-    #main-slider-section .main_banner a {
-        padding: 10px 10px;
-    }
-
-    .main-btn {
-        display: none;
-    }
-
-    #brand {
-        margin-bottom: 80px;
-    }
-
-    #brand .brand-content {
-        width: 100%;
-        height: 800px;
-    }
-
-    #menu-story h3 {
-        margin-bottom: 60px;
-    }
-    
-    #menu-story > ul > li {
-        margin-bottom: 30px;
-    }
-
-    #menu-story > ul > li:first-of-type {
-        border-right: 2px solid black;
-        padding: 0 20px;
-    }
-
-    #menu-story > ul > li:last-of-type {
-        padding: 0 20px;
-    }
-
-    #menu-story .tap-menu-container p {
-        font-size: 16px;
-    }
-
-    #menu-story .menu-slider {
-        display: none;
-    }
-
-    #menu-story .more {
-        margin-top: 60px;
-    }
-
-    #service {
-        width: 100%;
-    }
-
-    #service .service-container {
-        flex-direction: column;
-    }
-
-    #service .box-contain {
-        width: 90%;
-    }
-
-    #service input {
-        width: 100%;
-        height: 50px;
-        font-size: 18px;
-    }
-
-    #service .box-contain-flex {
-        display: flex;
-        flex-direction: column;
-    }
-
-    #service textarea {
-        width: 100%;
-        font-size: 18px;
-    }
-
-    #service input[type="submit"] {
-        width: 98px;
-        height: 40px;
-        font-size: 25px;
-    }
-
-    #beanstagram .rotation li {
-        width: 170px;
-        height: 200px;
-    }
-
-    #store .store-img {
-        margin-bottom: 100px;
-    }
-
-    #store .store-container img {
-        width: 350px;
-        height: 350px;
-    }
-
-    #store .store-text a {
-        padding: 10px 40px;
-    }
-
-    footer {
-        height: 280px;
-    }
-
-    .foot-container {
-        flex-direction: column;
-    }
-
-    .foot-container .sns-link {
-        padding-top: 30px;
-    }
-}
-
-
-/* slide 전체 링크 css */
-.main_banner .a-block {
-    display: block;
-    border: none;
-    width: 100%;
-    height: 100%;
 }

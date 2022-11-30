@@ -1,0 +1,107 @@
+/* header */
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 112px;
+    z-index: 999;
+    box-shadow: 3px 3px 10px grey;
+}
+
+h1 a {
+    display: inline-block;
+    width: 300px;
+    margin: 32px; 
+}
+
+h1 a img {
+    width: 100%;
+}
+
+nav {
+    width: 35%;
+}
+
+#gnb {
+    display: flex;
+    justify-content: space-evenly;
+    margin-right: 35px;
+    font-size: 15px;
+    align-items: center;
+}
+
+#gnb::before {
+    content: "";
+    width: 100%;
+    position:absolute;
+    top: 85px;
+    left: 0;
+    height: 180px;
+    background: #fff;
+    display: block;
+}
+
+#gnb::before {
+    display: none;
+}
+
+#gnb.on::before {
+    display: block;
+}
+
+#gnb .snb {
+    display: none;
+    position: absolute;
+    top: 100px;
+}
+
+#gnb.on > .snb {
+    display: block;
+}
+
+.xi-bars {
+    display: none;
+    position: absolute;
+    right: 15px;
+    font-size: 24px;
+}
+
+.hambeger-menu {
+    display: none;
+}
+
+/* main banner */
+
+#main-slider-section {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 200px;
+}
+
+.main-slide {
+    display: flex;
+}
+
+.main_banner {
+    width: 100vw;
+    flex-shrink: 0;
+}
+
+.img_absolute {
+    position: absolute;
+}
+.main_banner img {
+    width: 100%;
+
+}
+
+.main_banner .text-container {
+    margin-left: 15%;
+    margin-top: 15%;
+}

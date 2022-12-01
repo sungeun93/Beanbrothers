@@ -9,6 +9,7 @@
     height: 112px;
     z-index: 999;
     box-shadow: 3px 3px 10px grey;
+    transition: 0.5s;
 }
 
 h1 a {
@@ -22,7 +23,7 @@ h1 a img {
 }
 
 nav {
-    width: 35%;
+    width: 45%;
 }
 
 #gnb {
@@ -33,24 +34,9 @@ nav {
     align-items: center;
 }
 
-#gnb::before {
-    content: "";
-    width: 100%;
-    position:absolute;
-    top: 85px;
-    left: 0;
-    height: 180px;
-    background: #fff;
-    display: block;
-}
-
-#gnb::before {
-    display: none;
-}
-
-#gnb.on::before {
-    display: block;
-}
+#gnb > li {
+    margin-right: 25px;
+} 
 
 #gnb .snb {
     display: none;
@@ -58,8 +44,16 @@ nav {
     top: 100px;
 }
 
-#gnb.on > .snb {
+#gnb .snb > li {
+    margin-bottom: 24px;
+}
+
+#gnb .show {
     display: block;
+}
+
+.open-header {
+    padding-bottom : 240px;
 }
 
 .xi-bars {
@@ -103,7 +97,7 @@ nav {
     height: 100%;
 }
 
-#main_banner .text-container {
+#main-slider-section .text-container {
     padding-left: 15%;
     padding-top: 15%;
 }
@@ -229,6 +223,7 @@ nav {
     font-weight: bold;
     color: #302323;
     margin-bottom: 64px;
+    justify-content: center;
 }
 
 #menu-story > ul > li {
@@ -248,12 +243,9 @@ nav {
 
 #menu-story ul {
     display: flex;
-    overflow: hidden;
-    justify-content: center;
 }
 
-#menu-story .tap-menu-container ul {
-    justify-content: unset;
+#menu-story .tap-menu-container {
     overflow: hidden;
 }
 
@@ -266,6 +258,9 @@ nav {
 #menu-story .tap-menu-container_01 {
     width: 100%;
     gap: 150px;
+    transform: translateX(calc(-355px * 0));
+    transition: 0.5s;
+    justify-content: center;
 }
 
 #menu-story .tap-menu-container P {
@@ -277,12 +272,15 @@ nav {
     width: 100%;
     display: none;
     gap: 150px;
+    transform: translateX(calc(-355px * 1));
+    transition: 0.5s;
+    justify-content: center;
 }
 
 #menu-story .menu-slider {
     display: flex;
-    margin: 50px 0 0 190px;
     align-items: center;
+    padding-top: 50px;
 }
 
 .xi-long-arrow-left {
@@ -296,8 +294,9 @@ nav {
 #menu-story .slider-scroll {
     border-radius: 36px;
     background-color: #D9D9D9;
-    width: 1350px;
+    width: calc(100% - 32px);
     height: 10px;
+    margin: 0 auto;
 }
 
 #menu-story .scroll {
@@ -321,6 +320,9 @@ nav {
     padding: 10px 40px;
     font-size: 20px;
     font-weight: bold;
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
 }
 
 #service {
@@ -510,6 +512,8 @@ footer {
     max-width: 580px;
     width: 100%;
 }
+
+
 
 @media screen and (max-width:1240px) {
     html, body {

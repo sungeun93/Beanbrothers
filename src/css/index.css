@@ -76,6 +76,7 @@ nav {
 
 .main-slide {
     display: flex;
+    transition: 1s;
 }
 
 .main_banner {
@@ -138,16 +139,21 @@ nav {
     transform: translateX(-50%);
 }
 
+.main-btn > a{
+    display: inline-block;
+
+}
+
 .xi-arrow-left , .xi-arrow-right {
     font-weight: bold;
 }
 
 .xi-arrow-left {
-    padding-right: 25px;
+    margin-right: 25px;
 }
 
 .xi-arrow-right {
-    padding-left: 25px;
+    margin-left: 25px;
 }
 
 #brand {
@@ -191,6 +197,7 @@ nav {
 
 #brand .unit-link .active {
     opacity: 1;
+    transition: 1s;
 }
 
 #brand h3 {
@@ -520,7 +527,6 @@ footer {
     max-width: 580px;
     width: 100%;
 }
-
 
 
 @media screen and (max-width:1240px) {

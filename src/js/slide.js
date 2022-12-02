@@ -1,129 +1,46 @@
-const slide = document.querySelector(".main-slide");
-let slideWidth = slide.clienWidth;
+const slideContainer = document.querySelector(".main-slide");
+const prevBtn = document.getElementById("prev-slide");
+const nextbtn = document.getElementById("next-slide");
+const slidePage = document.querySelector(".slide-page");
+let index = 0;
+let slideIterval;
 
-const preBtn = document.querySelector(".xi-arrow-left");
-const nextBtn = document.querySelector(".xi-arrow-right");
+initialization();
 
-let slideBanner = document.querySelectorAll(".main_banner");
-const maxSlide = slideBanner.length;
-
-let currSlide = 1;
-
-const startSlide = slideBanner[0];
-const endSlide = slideBanner[slideBanner.length-1];
-const startElem = document.createElement("div");
-const endElem = document.createElement("div");
-
-endSlide.classList.forEach((c) => endElem.classList.add(c));
-endElem.innerHTML = endSlide.innerHTML;
-
-startSlide.classList.forEach((c) => startSlide.classList.add(c));
-startElem.innerHTML = startSlide.innerHTML;
-
-slideBanner[0].before(endElem);
-slideBanner[slideBanner.length - 1].after(startElem);
-
-slideBanner = document.querySelector(".main_banner");
-let offset = slideWidth + currSlide;
-slideBanner.forEach((i) => {
-    i.setAttribute("style", `left: ${-offset}px`);
-});
-
-function nextMove() {
-    currSlide++; 
-
-    if(currSlide < maxSlide) {
-        const offset = slideWidth * currSlide;
-        slideBanner.forEach((i) => {
-            i.setAttribute("style", `left: ${-offset}px`);
-        });
-    } else {
-currSlide = 0;
-let offset = slideWidth * currSlide;
-slideBanner.forEach((i) => {
-    i.setAttribute("style", `transition: ${0}s; left: ${-offset}px`);
-});
-currSlide++;
-offset = slideWidth * currSlide;
-setTimeout(() => {
-    slideBanner.forEach((i) => {
-    i.setAttribute("style", `transition: ${0.15}s; left: ${-offset}px`);
+function initialization() {     // 초기화하기
+    slideContainer.setAttribute('width', `${slideContainer.childElementCount*100}vw`)
+    prevBtn.addEventListener('click', (e) => {
+        prev();
     });
-}, 0);
-    }
+    nextbtn.addEventListener('click', next);
+    move();
 }
 
-function preMove() {
-    currSlide--;
-    if(currSlide > 0) {
-        const offset = slideWidth * currSlide;
-        slideBanner.forEach((i) => {
-            i.setAttribute("style", `left: ${-offset}px`);
-        });
-    } else {
-        currSlide = maxSlide + 1;
-        let offset = slideWidth * currSlide;
-        slideBanner.forEach((i) => {
-            i.setAttribute("style", `transition: ${0}s; left: ${-offset}px`);
-        });
-        currSlide--;
-    offset = slideWidth * currSlide;
-    setTimeout(() => {
-    slideBanner.forEach((i) => {
-        i.setAttribute("style", `transition: ${0.15}s; left: ${-offset}px`);
-    });
-    }, 0);
+function next() {
+    index++;
+
+    if(index===slideContainer.childElementCount) {
+        index=0
     }
+    move();
+
 }
 
-nextBtn.addEventListener("click",() => {
-    nextMove();
-});
-preBtn.addEventListener("click",() => {
-    preMove();
-});
-window.addEventListener("resize",() => {
-    slideWidth = slide.clientWidth
-});
+function prev() {
+    index--;
 
-let startPoint = 0;
-let endPoint = 0;
-
-slide.addEventListener("mousedown",(e) => {
-    startPoint = e.pageX;
-});
-slide.addEventListener("mouseup", (e) => {
-    endPoint = e.pageX;
-    if(startPoint < endPoint) {
-        preMove();
-    }else if(startPoint > endPoint) {
-        nextMove();
+    if(index === -1) {
+        index = slideContainer.childElementCount-1;
     }
-});
+    move();
+}
 
-slide.addEventListener("touchstart",(e) => {
-    startPoint = e.touches[0].pageX;
-});
-slide.addEventListener("touchend", (e) => {
-    endPoint = e.changedTouches[0].pageX;
-    if(startPoint < endPoint) {
-        preMove();
-    }else if(startPoint > endPoint) {
-        nextMove();
-    }
-});
+function move() {
+    slideContainer.setAttribute('style' ,`transform:translateX(-${100*index}vw)`)
 
-let loopInterval = setInterval(() => {
-    nextMove();
-},3000);
-
-slide.addEventListener("mouseover", () => {
-    clearInterval(loopInterval);
-});
-
-slide.addEventListener("mouseout", () => {
-    loopInterval = setInterval(() => {
-    nextMove();
-    }, 3000);
-}); 
-
+    clearInterval(slideIterval);
+    slideIterval = setInterval(()=>{
+    next();   
+    },5000);
+    slidePage.innerText = `${index+1}/${slideContainer.childElementCount}`
+}

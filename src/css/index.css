@@ -63,8 +63,19 @@ nav {
     font-size: 24px;
 }
 
-.hambeger-menu {
+.hamburger-menu {
     display: none;
+}
+
+.hamburger-menu .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 12px;
+}
+
+.hamburger-menu .navbar_menu {
+    display: flex;
 }
 
 #main-slider-section {
@@ -477,10 +488,10 @@ nav {
 @keyframes rotation {
     from {
         transform: translateX(0);
-      }
-      to {
+    }
+    to {
         transform: translateX(-100%);
-      }
+    }
 }
 
 #store .store-container {
@@ -561,15 +572,12 @@ footer {
     #header nav {
         display: none;
         flex-direction: column;
+        padding: 8px 24px;
     }
 
     #header nav ul {
         flex-direction: column;
         align-items: center;
-    }
-
-    #header .hambeger-menu {
-        display: none;
     }
 
     .xi-market {
@@ -582,11 +590,41 @@ footer {
         font-size: 30px;
     }
 
+    #gnb {
+        flex-direction: column;
+    }
+
+    .hamburger-menu .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 8px 24px;
+    }
+
+    .hamburger-menu .navbar.active {
+        display: block;
+    }
+    
+    .hamburger-menu .navbar_menu {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        display: none;
+    }
+
+    .hamburger-menu .navbar_menu.active {
+        display: flex;
+    }
+
+    .hamburger-menu .navbar_menu li {
+        width: 100%;
+        text-align: center;
+    }
+
     main {
         padding-top: 99px;
     }
     
-    .hambeger-menu ul li:hover {
+    .hambeger-menu ul:hover {
         display: block;
         width: 100%;
         background-color: white;

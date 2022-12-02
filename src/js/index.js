@@ -18,6 +18,16 @@ header.addEventListener('mouseleave', ()=> {
 /* 헤더 내려오기 */
 
 
+const toggleBtn = document.getElementById('hamburger');
+const menu = document.getElementsByClassName('navbar')
+const subMeun = document.getElementsByClassName('navbar_menu');
+
+toggleBtn.addEventListener('click', ()=>{
+    menu.classList.toggle('active');
+    subMeun.classList.toggle('active');
+});
+/* 반응형 햄버거 */
+
 
 
 

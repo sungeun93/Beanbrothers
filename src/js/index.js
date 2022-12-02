@@ -17,25 +17,25 @@ header.addEventListener('mouseleave', ()=> {
 });
 /* 헤더 내려오기 */
 
-const unitLink = document.getElementsByClassName("unit-link");
 
-brand(); 
 
-function brand() {
-    const unitLink = document.getElementsByClassName('unit-link');
-    for(let i = 0; i < unitLink.length; i ++) {
-        unitLink[i].style.transition = '1s';
+
+
+scrollTop(); 
+
+function scrollTop() {
+    const scrollAnimation = document.getElementsByClassName('scroll-animation');
+    for(let i = 0; i < scrollAnimation.length; i ++) {
+        scrollAnimation[i].style.transition = '1s';
 
         window.addEventListener('scroll', () => {
-            // unitLink.classList.add('active'; 
-        if(unitLink[i].getBoundingClientRect().top - window.innerHeight < 0) {
-                unitLink[i].classList.add('active');
+        if(scrollAnimation[i].getBoundingClientRect().top - window.innerHeight < 0) {
+                scrollAnimation[i].classList.add('active');
             }else {
-                unitLink[i].classList.remove('active');
+                scrollAnimation[i].classList.remove('active');
             }
-        })
-        
+        })      
     }
 }; 
-/* brand 글자 올라오기 */
+/* brand, service 글자 올라오기 */
 

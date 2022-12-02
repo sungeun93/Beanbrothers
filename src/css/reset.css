@@ -19,3 +19,11 @@ a {
 h3 {
     font-size: 40px;
 }
+
+.scroll-animation{  
+    opacity: 0;
+}
+
+.from-down {
+    transform: translateY(100px);
+}

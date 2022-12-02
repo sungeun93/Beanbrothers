@@ -44,3 +44,40 @@ function move() {
     },5000);
     slidePage.innerText = `${index+1}/${slideContainer.childElementCount}`
 }
+/* 메인배너 슬라이드 */
+
+
+
+
+
+
+const tapSlide = document.getElementsByClassName('tap-menu-container');
+const sliderScroll = document.getElementsByClassName('slider-scroll');
+const scroll = document.getElementsByClassName('scroll')
+
+let Index = 0;
+
+function init() {
+    tapSlide = setAttribute('width', `${tapSlide.childElementCount*355}px`)
+}
+
+function Next() {
+    Index ++;
+
+    if(Index===tapSlide.childElementCount) {
+        Index=0
+    }
+}
+
+function Prev() {
+    Index --;
+
+    if(Index===-1) {
+        Index = tapSlide.childElementCount-1;
+    }
+}
+
+
+
+
+

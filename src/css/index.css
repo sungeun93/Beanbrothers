@@ -193,9 +193,12 @@ nav {
     fill: none;
     text-align: center;
     position: relative;
+    opacity: 0;
+    transform: translateY(100px);
 }
 
-#brand .unit-link .active {
+#brand .scroll-animation.active {
+    transform: none;
     opacity: 1;
     transition: 1s;
 }
@@ -208,10 +211,6 @@ nav {
     margin-bottom: 28px;
     font-size: 18px;
     line-height: 25px;
-}
-
-#brand .unit-link .acrive{
-    opacity: 1;
 }
 
 #brand .unit-button {
@@ -356,6 +355,12 @@ nav {
     opacity: 0.5;
 }
 
+#service .scroll-animation.active {
+    transform: none;
+    opacity: 1;
+    transition: 1s;
+}
+
 #service h3 {
     color: #F4F4F4;
     font-weight: bold;
@@ -449,9 +454,14 @@ nav {
     align-items: center;
 }
 
+#beanstagram .rotation {
+    overflow: hidden;
+    display: flex;
+}
+
 #beanstagram .rotation ul {
     display: flex;
-    overflow: hidden;
+    animation: rotation 20s infinite linear;
 }
 
 #beanstagram .rotation li {
@@ -464,6 +474,15 @@ nav {
     flex-shrink: 0;
 }
 
+@keyframes rotation {
+    from {
+        transform: translateX(0);
+      }
+      to {
+        transform: translateX(-100%);
+      }
+}
+
 #store .store-container {
     display: flex;
     margin: 0 auto;
@@ -471,7 +490,6 @@ nav {
     justify-content: center;
     gap: 150px;
 }
-
 
 #store .store-container h3 {
     color: #302323;
@@ -527,6 +545,7 @@ footer {
     max-width: 580px;
     width: 100%;
 }
+
 
 
 @media screen and (max-width:1240px) {

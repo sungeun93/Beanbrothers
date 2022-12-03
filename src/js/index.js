@@ -20,11 +20,11 @@ header.addEventListener('mouseleave', ()=> {
 
 const toggleBtn = document.getElementById('hamburger');
 const menu = document.getElementsByClassName('navbar')
-const subMeun = document.getElementsByClassName('navbar_menu');
+const subMenu = document.getElementsByClassName('navbar_menu');
 
 toggleBtn.addEventListener('click', ()=>{
     menu.classList.toggle('active');
-    subMeun.classList.toggle('active');
+    subMenu.classList.toggle('active');
 });
 /* 반응형 햄버거 */
 
@@ -49,3 +49,22 @@ function scrollTop() {
 }; 
 /* brand, service 글자 올라오기 */
 
+
+
+
+const tabs = document.querySelectorAll('[data-tab-target]');
+const tabContents = document.querySelectorAll('[data-tab-content]');
+
+tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+        const target = querySelector(tab.dataset.tabTarget);
+        tabContents.forEach(tabContents => {
+            tabContents.classList.remove('active')
+        });
+        tabs.forEach(tab => {
+            tab.classList.remove('active')
+        });
+        target.classList.add('active')
+        tab.classList.add('active')
+    });
+});

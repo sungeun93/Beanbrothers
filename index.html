@@ -67,7 +67,6 @@
                         <a href="###" class="xi-market xi-x"></a>
                 </ul>
             </nav>
-            <div class="xi-bars" id="hamburger"></div>   
         </div>
         
         <div id="hamburger-menu">
@@ -111,6 +110,9 @@
                         <a href="###">회원가입</a>
                     </li>
                 </ul>
+                <a href="###" id="hamburger">
+                    <div class="xi-bars"></div>
+                </a>
             </nav>    
         </div>
     </header>
@@ -190,14 +192,14 @@
         
         <section id="menu-story">
             <h3>MENU STORY</h3>
-            <ul>
-                <li> 
+            <ul class="tabs">
+                <li data-tab-target="tab_01"> 
                     <a href="###">시즌 메뉴</a> </li>
-                <li>
+                <li data-tab-target="tab_02">
                     <a href="###">시그니처 블랜드</a> </li>
             </ul>
-            <div class="tap-menu-container">
-                <ul class="tap-menu-container_01">
+            <div class="tab-menu-container">
+                <ul class="tab-menu-container_01" data-tab-content="tab_01">
                     <li>
                         <a href="###">
                             <div class="img-area">
@@ -230,7 +232,7 @@
                     </li>
                 </ul>
 
-                <ul class="tap-menu-container_02">
+                <ul class="tab-menu-container_02" data-tab-content="tab_02">
                     <li>
                         <a href="###">
                             <div class="img-area">

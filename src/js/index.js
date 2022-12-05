@@ -19,8 +19,8 @@ header.addEventListener('mouseleave', ()=> {
 
 
 const toggleBtn = document.getElementById('hamburger');
-const menu = document.getElementsByClassName('navbar')
-const subMenu = document.getElementsByClassName('navbar_menu');
+const menu = document.getElementsByClassName('navbar')[0];
+const subMenu = document.getElementsByClassName('navbar_menu')[0];
 
 toggleBtn.addEventListener('click', ()=>{
     menu.classList.toggle('active');

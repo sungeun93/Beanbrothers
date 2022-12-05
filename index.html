@@ -193,13 +193,13 @@
         <section id="menu-story">
             <h3>MENU STORY</h3>
             <ul class="tabs">
-                <li data-tab-target="tab_01"> 
+                <li class="tablinks active" onclick="openTab(event, 'tab1')"> 
                     <a href="###">시즌 메뉴</a> </li>
-                <li data-tab-target="tab_02">
+                <li class="tablinks" onclick="openTab(event, 'tab2')">
                     <a href="###">시그니처 블랜드</a> </li>
             </ul>
             <div class="tab-menu-container">
-                <ul class="tab-menu-container_01" data-tab-content="tab_01">
+                <ul class="tabcontent" id="tab1">
                     <li>
                         <a href="###">
                             <div class="img-area">
@@ -232,7 +232,7 @@
                     </li>
                 </ul>
 
-                <ul class="tab-menu-container_02" data-tab-content="tab_02">
+                <ul class="tabcontent" id="tab2">
                     <li>
                         <a href="###">
                             <div class="img-area">
@@ -276,13 +276,13 @@
                 </ul>
 
                 <div class="menu-slider">
-                    <a href="###">
+                    <a href="###" id="left-slide">
                         <div class="xi-long-arrow-left xi-3x"></div>
                     </a>
                     <div class="slider-scroll">
                         <span class="scroll"></span>
                     </div>
-                    <a href="###">
+                    <a href="###" id="rightslide">
                         <div class="xi-long-arrow-right xi-3x"></div>
                     </a>
                 </div>

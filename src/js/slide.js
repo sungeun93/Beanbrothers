@@ -48,34 +48,56 @@ function move() {
 
 
 
-
-
-
-const tapSlide = document.getElementsByClassName('tap-menu-container');
+const tabSlide = document.getElementsByClassName('tab-menu-container');
+const innerSlider = document.querySelectorAll('.tab-menu-container > ul');
 const sliderScroll = document.getElementsByClassName('slider-scroll');
-const scroll = document.getElementsByClassName('scroll')
+const scroll = document.getElementsByClassName('scroll');
+const leftSlide = document.getElementById('left-slide');
+const rightSlide = document.getElementById('right-slide');
+let pressed = false
+let startx
+let x
 
-let Index = 0;
 
-function init() {
-    tapSlide = setAttribute('width', `${tapSlide.childElementCount*355}px`)
+
+tabSlide.addEventListener("mousedown", e => {
+pressed = true
+startx = e.offsetX - innerSlider.offsetLeft
+tabSlide.style.cursor = "grabbing"
+})
+
+tabSlide.addEventListener("mouseenter", () => {
+tabSlide.style.cursor = "grab"
+})
+
+tabSlide.addEventListener("mouseup", () => {
+tabSlide.style.cursor = "grab"
+})
+
+window.addEventListener("mouseup", () => {
+pressed = false
+})
+
+tabSlide.addEventListener("mousemove", e => {
+if (!pressed) return
+e.preventDefault()
+x = e.offsetX
+
+innerSlider.style.left = `${x - startx}px`
+checkboundary()
+})
+
+function checkboundary() {
+let outer = tabSlide.getBoundingClientRect()
+let inner = innerSlider.getBoundingClientRect()
+
+if (parseInt(innerSlider.style.left) > 0) {
+    innerSlider.style.left = "0px"
+} else if (inner.right < outer.right) {
+    innerSlider.style.left = `-${inner.width - outer.width}px`
+}
 }
 
-function Next() {
-    Index ++;
-
-    if(Index===tapSlide.childElementCount) {
-        Index=0
-    }
-}
-
-function Prev() {
-    Index --;
-
-    if(Index===-1) {
-        Index = tapSlide.childElementCount-1;
-    }
-}
 
 
 

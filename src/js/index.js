@@ -18,6 +18,8 @@ header.addEventListener('mouseleave', ()=> {
 /* 헤더 내려오기 */
 
 
+
+
 const toggleBtn = document.getElementById('hamburger');
 const menu = document.getElementsByClassName('navbar')[0];
 const subMenu = document.getElementsByClassName('navbar_menu')[0];
@@ -27,6 +29,8 @@ toggleBtn.addEventListener('click', ()=>{
     subMenu.classList.toggle('active');
 });
 /* 반응형 햄버거 */
+
+
 
 
 
@@ -52,19 +56,17 @@ function scrollTop() {
 
 
 
-const tabs = document.querySelectorAll('[data-tab-target]');
-const tabContents = document.querySelectorAll('[data-tab-content]');
 
-tabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-        const target = querySelector(tab.dataset.tabTarget);
-        tabContents.forEach(tabContents => {
-            tabContents.classList.remove('active')
-        });
-        tabs.forEach(tab => {
-            tab.classList.remove('active')
-        });
-        target.classList.add('active')
-        tab.classList.add('active')
-    });
-});
+function openTab(evt, tabName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName('tabcontent');
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName('tablinks');
+    for (i = 0; i < tabcontent.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace('active','');
+    }
+    document.getElementById('tabName').style.display = "block";
+    evt.currentTarget.className += "active";
+}

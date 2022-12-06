@@ -60,7 +60,7 @@ let x
 
 
 
-tabSlide.addEventListener("mousedown", e => {
+tabSlide[i].addEventListener("mousedown", e => {
 pressed = true
 startx = e.offsetX - innerSlider.offsetLeft
 tabSlide.style.cursor = "grabbing"

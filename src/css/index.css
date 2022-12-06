@@ -257,11 +257,11 @@ nav {
 
 #menu-story > ul > li:first-of-type {
     border-right: 2px solid black;
-    padding: 0 72px;
 }
 
-#menu-story > ul > li:last-of-type {
+#menu-story > ul > li a {
     padding: 0 72px;
+    display: block;
 }
 
 #menu-story ul {
@@ -291,13 +291,12 @@ nav {
     font-size: 20px;
 }
 
-#tab2 {
+#menu-story #tab2 {
     width: 100%;
-    display: none;
     gap: 150px;
     transform: translateX(calc(-355px * 1));
     transition: 0.5s;
-    justify-content: center;
+    display: none;
 }
 
 #menu-story .menu-slider {

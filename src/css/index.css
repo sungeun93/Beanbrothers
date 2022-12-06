@@ -306,14 +306,6 @@ nav {
     margin: 0 50px;
 }
 
-.xi-long-arrow-left {
-    padding-right: 15px;
-}
-
-.xi-long-arrow-right {
-    padding-left: 15px;
-}
-
 #menu-story .slider-scroll {
     border-radius: 36px;
     background-color: #D9D9D9;
@@ -678,10 +670,6 @@ footer {
 
     #menu-story .menu-slider {
         margin-left: 0;
-    }
-
-    .xi-long-arrow-left, .xi-long-arrow-right {
-        display: none;
     }
 
     #service p {

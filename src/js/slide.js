@@ -120,51 +120,51 @@ function subSlide() {
 /* 탭1 */
 
 
-    // window.addEventListener("mouseup", () => {
-    //     pressed = false
-    // })
+    window.addEventListener("mouseup", () => {
+        pressed = false
+    })
     
-    // for(let i = 0 ; i < tabSlide.length ; i ++){
+    for(let i = 0 ; i < tabSlide.length ; i ++){
     
-    //     tabSlide[i].addEventListener("mousedown", e => {
-    //         pressed = true
-    //         startx = checkPosX(e)
+        tabSlide[i].addEventListener("mousedown", e => {
+            pressed = true
+            startx = checkPosX(e)
     
-    //         tabSlide[i].style.cursor = "grab";
-    //         slideTab[i].style.transition = `0.5s`;
-    //     })
+            tabSlide[i].style.cursor = "grab";
+            slideTab[i].style.transition = `0.5s`;
+        })
         
-    //     tabSlide[i].addEventListener("mouseup", () => {
-    //         tabSlide[i].style.cursor = "grab";
-    //         savePosition = startx + x;
-    //         slideTab[i].style.transition = `0.5s`;
-    //         x=0;
-    //     })
+        tabSlide[i].addEventListener("mouseup", () => {
+            tabSlide[i].style.cursor = "grab";
+            savePosition = startx + x;
+            slideTab[i].style.transition = `0.5s`;
+            x=0;
+        })
     
-    //     tabSlide[i].addEventListener("mousemove", e => {
-    //         if (!pressed) return
-    //         e.preventDefault()
-    //         x = checkPosX(e) - startx;
-    //         console.log(startx, x)
-    //         slideTab[i].style.transform = `translateX(-${savePosition - x}px)`;
-    //         checkboundary(tabSlide[i],slideTab[i])
-    //     })
-    // }
+        tabSlide[i].addEventListener("mousemove", e => {
+            if (!pressed) return
+            e.preventDefault()
+            x = checkPosX(e) - startx;
+            console.log(startx, x)
+            slideTab[i].style.transform = `translateX(-${savePosition - x}px)`;
+            checkboundary(tabSlide[i],slideTab[i])
+        })
+    }
     
-    // function checkboundary(tas,ins) {
-    //     let outer = tas.getBoundingClientRect()
-    //     let inner = ins.getBoundingClientRect()
+    function checkboundary(tas,ins) {
+        let outer = tas.getBoundingClientRect()
+        let inner = ins.getBoundingClientRect()
     
-    //     // if (parseInt(ins.style.left) > 0) {
-    //     //     ins.style.left = "0px"
-    //     // } else if (inner.right < outer.right) {
-    //     //     ins.style.left = `-${inner.width - outer.width}px`
-    //     // }
-    // }
+        if (parseInt(ins.style.left) > 0) {
+            ins.style.left = "0px"
+        } else if (inner.right < outer.right) {
+            ins.style.left = `-${inner.width - outer.width}px`
+        }
+    }
     
-    // function checkPosX(e) {
+    function checkPosX(e) {
     
-    //     return e.clientX;
-    // }
+        return e.clientX;
+    }
 /* 탭2 */
 }

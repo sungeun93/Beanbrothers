@@ -294,12 +294,12 @@ nav {
 #menu-story #tab2 {
     width: 100%;
     gap: 150px;
-    transform: translateX(calc(-355px * 1));
+    transform: translateX(calc(-355px * 0));
     transition: 0.5s;
     display: none;
 }
 
-#menu-story .menu-slider {
+/* #menu-story .menu-slider {
     display: flex;
     align-items: center;
     padding-top: 50px;
@@ -321,7 +321,7 @@ nav {
     display: block;
     width: 200px;
     height: 100%;
-}
+} */
 
 #menu-story .more {
     text-align: center;
@@ -668,9 +668,9 @@ footer {
         gap: unset;
     }
 
-    #menu-story .menu-slider {
+    /* #menu-story .menu-slider {
         margin-left: 0;
-    }
+    } */
 
     #service p {
         margin-bottom: 70px;
@@ -762,9 +762,9 @@ footer {
             font-size: 16px;
         }
     
-        #menu-story .menu-slider {
+        /* #menu-story .menu-slider {
             display: none;
-        }
+        } */
     
         #menu-story .more {
             margin-top: 60px;

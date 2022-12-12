@@ -268,10 +268,6 @@ nav {
     display: flex;
 }
 
-#menu-story .tab-menu-container {
-    overflow: hidden;
-}
-
 #menu-story .tab-menu-container img {
     display: inline-block;
     width: 355px;
@@ -280,9 +276,8 @@ nav {
 
 #tab1 {
     width: 100%;
-    gap: 150px;
-    transform: translateX(calc(-355px * 0));
-    transition: 0.5s;
+    gap: 100px;
+    /* transform: translateX(calc(-355px * 0)); */
     justify-content: center;
 }
 
@@ -294,8 +289,7 @@ nav {
 #menu-story #tab2 {
     width: 100%;
     gap: 150px;
-    transform: translateX(calc(-355px * 0));
-    transition: 0.5s;
+    /* transform: translateX(calc(-355px * 0)); */
     display: none;
 }
 

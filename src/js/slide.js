@@ -1,5 +1,6 @@
 mainSlide();
 subSlide();
+tabSlide();
 
 
 
@@ -62,6 +63,80 @@ function subSlide() {
 
     const tabSlide = document.querySelector('.tab-menu-container');
     const innerSlider = document.querySelectorAll('#tab1');
+    let index = 0;
+    let slideWidth = 400;
+    let slideIterval;
+    let pressed = false;
+    let startPoint = 0;
+    let endPoint = 0;
+
+    slideIterval = setInterval(()=>{
+        next();    
+        },5000)
+
+    function next() {
+        index++;
+
+        if(index===tabSlide.childElementCount) {
+            index=0
+        }
+        move();
+    }
+
+    function prev() {
+        index--;
+
+        if(index===-1) {
+            index = tabSlide.childElementCount-1;
+        }
+        move();
+    }
+
+    function move() {
+        innerSlider[0].setAttribute('style', `transform:translateX(-${400*index}px)`)
+        console.log('moved!')
+        clearInterval(slideIterval);
+        slideIterval = setInterval(()=>{
+        next();    
+        },5000)
+    }
+    
+    innerSlider[0].addEventListener("mousedown", (e) => {
+        pressed = true;
+        startPoint = e.pageX;
+        clearInterval(slideIterval);
+    });
+    
+    innerSlider[0].addEventListener("mouseup", (e) => {
+        pressed = false;
+        endPoint = e.pageX;
+        
+        if(startPoint < endPoint) {
+            prev();
+        }else if(startPoint > endPoint) {
+            next();
+        }
+        console.log(index);
+    })
+    
+    innerSlider[0].addEventListener("mousemove",(e) => {
+        if(!pressed) return;
+        e.preventDefault();
+        const x = e.pageX - startPoint;
+        innerSlider[0].style.transform = `translateX(-${index*(slideWidth + 100)-x}px)`
+    })
+
+    innerSlider[0].addEventListener("mouseleave",() => {
+        startPoint = 0;
+    })
+}
+
+
+
+
+function tabSlide() {
+
+    const tabSlide = document.querySelector('.tab-menu-container');
     const slideTab = document.querySelectorAll('#tab2');
     let index = 0;
     let slideWidth = 400;
@@ -93,7 +168,7 @@ function subSlide() {
     }
 
     function move() {
-        tabSlide.setAttribute('style', `transform:translateX(-${400*index}px)`)
+        slideTab[0].setAttribute('style', `transform:translateX(-${400*index}px)`)
         console.log('moved!')
         clearInterval(slideIterval);
         slideIterval = setInterval(()=>{
@@ -101,31 +176,32 @@ function subSlide() {
         },5000)
     }
     
-    tabSlide.addEventListener("mousedown", (e) => {
+    slideTab[0].addEventListener("mousedown", (e) => {
         pressed = true;
         startPoint = e.pageX;
         clearInterval(slideIterval);
     });
     
-    tabSlide.addEventListener("mouseup", (e) => {
+    slideTab[0].addEventListener("mouseup", (e) => {
         pressed = false;
         endPoint = e.pageX;
-        slideIterval = setInterval(()=>{
-            next();    
-        },5000)
         
         if(startPoint < endPoint) {
             prev();
         }else if(startPoint > endPoint) {
             next();
         }
+        console.log(index);
     })
     
-    tabSlide.addEventListener("mousemove",(e) => {
+    slideTab[0].addEventListener("mousemove",(e) => {
         if(!pressed) return;
         e.preventDefault();
         const x = e.pageX - startPoint;
-        innerSlider[0].style.transform = `translateX(-${index*(slideWidth + 150)-x}px)`
+        innerSlider[0].style.transform = `translateX(-${index*(slideWidth + 100)-x}px)`
     })
 
+    slideTab[0].addEventListener("mouseleave",() => {
+        startPoint = 0;
+    })
 }

@@ -1,6 +1,6 @@
 mainSlide();
-subSlide();
-tabSlide();
+// subSlide();
+// tabSlide();
 
 
 
@@ -198,7 +198,7 @@ function tabSlide() {
         if(!pressed) return;
         e.preventDefault();
         const x = e.pageX - startPoint;
-        innerSlider[0].style.transform = `translateX(-${index*(slideWidth + 100)-x}px)`
+        innerSlider[0].style.transform = `translateX(-${index*(slideWidth + 150)-x}px)`
     })
 
     slideTab[0].addEventListener("mouseleave",() => {

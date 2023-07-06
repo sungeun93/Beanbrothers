@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 header {
     position: relative;
 }
@@ -71,6 +75,7 @@ nav {
 #hamburger-menu {
     display: none;
 }
+/* header */
 
 #main-slider-section {
     width: 100%;
@@ -127,6 +132,29 @@ nav {
     border-radius: 2px;
     font-size: 18px;
     padding: 10px 50px;
+    transition: all 0.3s;
+    position: relative;
+    z-index: 1;
+}
+
+.main_banner span::after {
+    content: "";
+    width: 0%;
+    height: 100%;
+    top: 0;
+    position: absolute;
+    left: 0;
+    background-color: #000;
+    transition: all 0.3s;
+}
+
+.main_banner span:hover {
+    color: #fff;
+}
+
+.main_banner span:hover::after {
+    width: 100%;
+    z-index: -1;
 }
 
 .main-btn {
@@ -160,6 +188,7 @@ nav {
 .xi-arrow-right {
     margin-left: 25px;
 }
+/* main banner */
 
 #brand {
     display: flex;
@@ -225,6 +254,7 @@ nav {
     padding: 10px;
     position: relative;
 }
+/* brand */
 
 #menu-story {
     margin-bottom: 160px;
@@ -281,47 +311,24 @@ nav {
 #tab1 {
     width: 100%;
     gap: 150px;
-    transform: translateX(calc(-355px * 0));
-    transition: 0.5s;
     justify-content: center;
 }
 
 #menu-story .tab-menu-container P {
     text-align: center;
     font-size: 20px;
+    width: 355px;
 }
 
 #menu-story #tab2 {
     width: 100%;
     gap: 150px;
-    transform: translateX(calc(-355px * 0));
-    transition: 0.5s;
     display: none;
 }
 
-/* #menu-story .menu-slider {
-    display: flex;
-    align-items: center;
-    padding-top: 50px;
-    margin: 0 50px;
+#menu-story .tab-menu-container {
+    position: relative;
 }
-
-#menu-story .slider-scroll {
-    border-radius: 36px;
-    background-color: #D9D9D9;
-    width: calc(100% - 32px);
-    height: 10px;
-    margin: 0 auto;
-}
-
-#menu-story .scroll {
-    border-radius: 30px;
-    color: #242424;
-    background-color: #242424;
-    display: block;
-    width: 200px;
-    height: 100%;
-} */
 
 #menu-story .more {
     text-align: center;
@@ -339,6 +346,12 @@ nav {
     width: fit-content;
     margin: 0 auto;
 }
+
+#menu-story .swiper-slide {
+    width: 355px !important;
+}
+/* menu-story */
+
 
 #service {
     position: relative;
@@ -440,6 +453,7 @@ nav {
     margin-left: auto;
     background-color: rgba(255,255,255,0.7);
 }
+/* service */
 
 #beanstagram .xi-instagram {
     display: block;
@@ -483,6 +497,7 @@ nav {
         transform: translateX(-100%);
     }
 }
+/* beanstagram */
 
 #store .store-container {
     display: flex;
@@ -521,6 +536,7 @@ nav {
     font-size: 20px;
     font-weight: bold;
 }
+/* store */
 
 footer {
     background-color: #1C1C1C;
@@ -546,6 +562,26 @@ footer {
     max-width: 580px;
     width: 100%;
 }
+
+#top-btn {
+    position: fixed;
+    right: 90px;
+    bottom: 32px;
+    background-color: white;
+    border: 1px solid black;
+    color: black;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.invisible {
+    visibility: hidden;
+}
+/* footer */
 
 
 
@@ -668,10 +704,6 @@ footer {
         gap: unset;
     }
 
-    /* #menu-story .menu-slider {
-        margin-left: 0;
-    } */
-
     #service p {
         margin-bottom: 70px;
     }
@@ -761,10 +793,6 @@ footer {
         #menu-story .tab-menu-container p {
             font-size: 16px;
         }
-    
-        /* #menu-story .menu-slider {
-            display: none;
-        } */
     
         #menu-story .more {
             margin-top: 60px;
